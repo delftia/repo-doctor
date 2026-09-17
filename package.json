@@ -1,0 +1,37 @@
+{
+  "name": "repo-doctor",
+  "version": "1.0.0",
+  "description": "A zero-runtime-dependency CLI that audits Git repositories for security, documentation, hygiene, CI and dependency issues.",
+  "type": "module",
+  "bin": {
+    "repo-doctor": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js .",
+    "scan": "node dist/cli.js .",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm run test"
+  },
+  "keywords": [
+    "git",
+    "repository",
+    "audit",
+    "security",
+    "cli",
+    "developer-tools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  }
+}
